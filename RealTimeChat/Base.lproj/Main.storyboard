@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ieE-Ga-ZCU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,12 +55,11 @@
                     <connections>
                         <outlet property="login" destination="abM-5h-kUb" id="6hU-Oo-0CA"/>
                         <outlet property="textField" destination="a2u-3K-zdm" id="gBg-Uv-G2g"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goTimeLine" id="UQE-Ls-wkg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7JS-qI-BGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-588" y="129.98500749625188"/>
+            <point key="canvasLocation" x="-751" y="134"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="tne-QT-ifu">
