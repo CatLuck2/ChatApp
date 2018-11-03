@@ -8,71 +8,135 @@
 
 /*
  
- DatabaseURl:https://realtimechat-e6e96.firebaseio.com/
+ DatabaseURl:
  
  */
 
 import UIKit
+import Firebase
 
 class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     
-    //投稿者と文字列を保持
-    var messageArray: Array<(Bool, String)> = []
+    //Firebase関連
+    //Firebaseに保存する変数を持つクラスインスタンス
+    var Post = Object()
+    //Objectクラスのインスタンスを持つ配列
+    var Posts = [Object]()
     
-    //messageArrayに代入するBool値
-    var messageBool = true
-    
+    //UDからユーザーネームを取得
+    let username = UserDefaults.standard.object(forKey: "userName") as! String
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //デリゲート
         textField.delegate = self
-        
+        //カスタムセルを登録
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "customcell")
         
     }
     
-    @IBAction func me(_ sender: Any) {
-        messageBool = true
-    }
-    
-    @IBAction func other(_ sender: Any) {
-        messageBool = false
-    }
-    
+    //セルの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messageArray.count
+        return Posts.count
     }
     
+    //セルを読み込む
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as? TableViewCell else { return UITableViewCell() }
         
-        //TableViewCellのtalk関数にBool値とテキストを渡す
-        cell.talk(messageArray[indexPath.row].0, messageArray[indexPath.row].1)
+        //TableViewCellのtalk関数にユーザー名とメッセを渡す
+        cell.talk(Posts[indexPath.row].username, Posts[indexPath.row].message)
         
         return cell
     }
     
+    //メッセを投稿
+    @IBAction func send(_ sender: Any) {
+        
+        //メッセが入力されてれば
+        if let _ = textField.text {
+            //Firebaseに[ユーザー名：本文]を保存
+            saveData_Firebase(username, textField.text!)
+            loadData_Firebase()
+        } else {return}
+        
+    }
+    
+    //Enterを押したとき
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        //もし入力値があるなら、代入
+        //メッセが入力されてれば
         if let _ = textField.text {
-            messageArray.append((messageBool,textField.text!))
-        }
-        
-        //リロード
-        tableView.reloadData()
-        
-        //セルが追加される度に自動スクロール
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.tableView.scrollToRow(at: IndexPath(row: self.messageArray.count - 1, section: 0), at: UITableView.ScrollPosition.bottom, animated: true)
-        }
+            //Firebaseに[ユーザー名：本文]を保存
+            saveData_Firebase(username, textField.text!)
+            loadData_Firebase()
+        } else {return true}
         
         return true
         
     }
+    
+    //Firebaseにデータを保存する関数
+    func saveData_Firebase(_ username:String, _ message:String) {
+    
+        //データベースの階層URL
+        let ref = Database.database().reference(fromURL: "https://realtimechat-e6e96.firebaseio.com/").child("post").childByAutoId()
+        
+        //データを保存するときの辞書
+        let data = ["username":username, "message": message]
+        
+        //データベースにデータを保存
+        ref.setValue(data)
+        
+        //tableViewをリロード
+//        tableView.reloadData()
+        
+        //セルが追加される度に自動スクロール
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//            self.tableView.scrollToRow(at: IndexPath(row: self.Posts.count - 1, section: 0), at: UITableView.ScrollPosition.bottom, animated: true)
+//        }
+        
+    }
+    
+    
+    //Firebaseからデータを取得する関数
+    func loadData_Firebase() {
+        
+        //データベースの参照URL
+        let ref = Database.database().reference()
+        
+        //データを初期化
+        self.Post = Object()
+        self.Posts = [Object]()
+        
+        ref.child("post").observeSingleEvent(of: .value) { (snap,error) in
+            
+            let snapdata = snap.value as? [String:NSDictionary]
+            
+            if snapdata == nil {
+                return
+            }
+            
+            for (_, snap) in snapdata! {
+                self.Post = Object()
+                if let username = snap["username"] as? String, let message = snap["message"] as? String {
+                    self.Post.username = username
+                    self.Post.message = message
+                }
+                self.Posts.append(self.Post)
+            }
+            
+            self.tableView.reloadData()
+            
+        }
+        
+    }
+    
+    
+    
 
 }

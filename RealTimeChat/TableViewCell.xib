@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ps3-g6-Gjk" userLabel="MyView">
                         <rect key="frame" x="4" y="4" width="215" height="36"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ua-rS-Ywz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="猫.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Ua-rS-Ywz">
                                 <rect key="frame" x="3" y="2" width="35" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="SUu-Wz-CdB"/>
@@ -52,7 +52,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3f-sD-kvp" userLabel="OtherView">
                         <rect key="frame" x="100" y="4" width="214" height="36"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-XO-htC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="猫.png" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-XO-htC">
                                 <rect key="frame" x="175" y="2" width="35" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="6N0-lR-kFM"/>
@@ -103,4 +103,7 @@
             <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="猫.png" width="600" height="600"/>
+    </resources>
 </document>

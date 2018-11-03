@@ -10,7 +10,7 @@ import UIKit
 
 class Object: NSObject {
     
-    var userID = String()
+    var username = String()
     var message = String()
 
 }

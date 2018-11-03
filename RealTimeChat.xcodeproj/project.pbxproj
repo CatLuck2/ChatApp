@@ -13,13 +13,12 @@
 		D7438019218D757800C46B13 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7438018218D757800C46B13 /* ChatViewController.swift */; };
 		D743801B218D75D600C46B13 /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743801A218D75D600C46B13 /* OpeningViewController.swift */; };
 		D743801D218D83C700C46B13 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743801C218D83C700C46B13 /* Object.swift */; };
+		D743801F218D9E0D00C46B13 /* 猫.png in Resources */ = {isa = PBXBuildFile; fileRef = D743801E218D9E0D00C46B13 /* 猫.png */; };
 		D7ABEB6A218C173600B4F036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABEB69218C173600B4F036 /* AppDelegate.swift */; };
 		D7ABEB6C218C173600B4F036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABEB6B218C173600B4F036 /* ViewController.swift */; };
 		D7ABEB6F218C173600B4F036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7ABEB6D218C173600B4F036 /* Main.storyboard */; };
 		D7ABEB71218C173800B4F036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ABEB70218C173800B4F036 /* Assets.xcassets */; };
 		D7ABEB74218C173800B4F036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7ABEB72218C173800B4F036 /* LaunchScreen.storyboard */; };
-		D7ABEB7D218C174900B4F036 /* 右吹き出し.png in Resources */ = {isa = PBXBuildFile; fileRef = D7ABEB7B218C174800B4F036 /* 右吹き出し.png */; };
-		D7ABEB7E218C174900B4F036 /* 左吹き出し.png in Resources */ = {isa = PBXBuildFile; fileRef = D7ABEB7C218C174900B4F036 /* 左吹き出し.png */; };
 		D7ABEB80218C183E00B4F036 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7ABEB7F218C183D00B4F036 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +30,7 @@
 		D7438018218D757800C46B13 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		D743801A218D75D600C46B13 /* OpeningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
 		D743801C218D83C700C46B13 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		D743801E218D9E0D00C46B13 /* 猫.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "猫.png"; sourceTree = "<group>"; };
 		D7ABEB66218C173600B4F036 /* RealTimeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealTimeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7ABEB69218C173600B4F036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7ABEB6B218C173600B4F036 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,8 +38,6 @@
 		D7ABEB70218C173800B4F036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7ABEB73218C173800B4F036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7ABEB75218C173800B4F036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7ABEB7B218C174800B4F036 /* 右吹き出し.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "右吹き出し.png"; sourceTree = "<group>"; };
-		D7ABEB7C218C174900B4F036 /* 左吹き出し.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "左吹き出し.png"; sourceTree = "<group>"; };
 		D7ABEB7F218C183D00B4F036 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F01059AA8AEE22611755B42C /* Pods-RealTimeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTimeChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealTimeChat/Pods-RealTimeChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +91,7 @@
 				D7438014218D736400C46B13 /* TableViewCell.swift */,
 				D7438015218D736400C46B13 /* TableViewCell.xib */,
 				D7ABEB6D218C173600B4F036 /* Main.storyboard */,
-				D7ABEB7B218C174800B4F036 /* 右吹き出し.png */,
-				D7ABEB7C218C174900B4F036 /* 左吹き出し.png */,
+				D743801E218D9E0D00C46B13 /* 猫.png */,
 				D7ABEB70218C173800B4F036 /* Assets.xcassets */,
 				D7ABEB72218C173800B4F036 /* LaunchScreen.storyboard */,
 				D7ABEB75218C173800B4F036 /* Info.plist */,
@@ -173,10 +170,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7ABEB74218C173800B4F036 /* LaunchScreen.storyboard in Resources */,
-				D7ABEB7E218C174900B4F036 /* 左吹き出し.png in Resources */,
 				D7438017218D736400C46B13 /* TableViewCell.xib in Resources */,
 				D7ABEB71218C173800B4F036 /* Assets.xcassets in Resources */,
-				D7ABEB7D218C174900B4F036 /* 右吹き出し.png in Resources */,
+				D743801F218D9E0D00C46B13 /* 猫.png in Resources */,
 				D7ABEB6F218C173600B4F036 /* Main.storyboard in Resources */,
 				D7ABEB80218C183E00B4F036 /* GoogleService-Info.plist in Resources */,
 			);
