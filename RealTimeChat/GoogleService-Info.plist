@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>157817743721-9m5556j9pu0idr6nks8le2qvlkgijeaq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.157817743721-9m5556j9pu0idr6nks8le2qvlkgijeaq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCguCuxYWED5IvNTdW-QGFsrmzPqgB0d0A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>157817743721</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Fujisawa-Yousuke.RealTimeChat</string>
+	<key>PROJECT_ID</key>
+	<string>realtimechat-e6e96</string>
+	<key>STORAGE_BUCKET</key>
+	<string>realtimechat-e6e96.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:157817743721:ios:2f1a08cd62f6a8b1</string>
+	<key>DATABASE_URL</key>
+	<string>https://realtimechat-e6e96.firebaseio.com</string>
+</dict>
+</plist>
