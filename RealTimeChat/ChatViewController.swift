@@ -36,6 +36,8 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         textField.delegate = self
         //カスタムセルを登録
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "customcell")
+        //リロード
+        tableView.reloadData()
         
     }
     
@@ -82,6 +84,9 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     //Firebaseにデータを保存する関数
     func saveData_Firebase(_ username:String, _ message:String) {
+        
+        //TextFieldの値をnil
+        textField.text = ""
     
         //データベースの階層URL
         let ref = Database.database().reference(fromURL: "https://realtimechat-e6e96.firebaseio.com/").child("post").childByAutoId()
@@ -96,9 +101,11 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 //        tableView.reloadData()
         
         //セルが追加される度に自動スクロール
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//            self.tableView.scrollToRow(at: IndexPath(row: self.Posts.count - 1, section: 0), at: UITableView.ScrollPosition.bottom, animated: true)
-//        }
+        if Posts.count > 0 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.tableView.scrollToRow(at: IndexPath(row: self.Posts.count - 1, section: 0), at: UITableView.ScrollPosition.bottom, animated: true)
+            }
+        } else {}
         
     }
     
