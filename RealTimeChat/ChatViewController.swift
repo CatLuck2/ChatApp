@@ -36,6 +36,8 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         textField.delegate = self
         //カスタムセルを登録
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "customcell")
+        //データを取得
+        loadData_Firebase()
         //リロード
         tableView.reloadData()
         
