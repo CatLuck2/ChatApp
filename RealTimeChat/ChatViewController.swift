@@ -61,6 +61,11 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         print(22)
         //TableViewCellのtalk関数にユーザー名とメッセを渡す
         cell.talk(Posts[indexPath.row].username, Posts[indexPath.row].message)
+        print("-------------------------------")
+        print("-------------------------------")
+        print(indexPath.row)
+        print("-------------------------------")
+        print("-------------------------------")
         print(30)
         return cell
     }
@@ -89,6 +94,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             saveData_Firebase(username, textField.text!)
             print(10)
             loadData_Firebase()
+            self.childNumber = self.Posts.count
             print(20)
         } else {return true}
         
@@ -105,7 +111,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         textField.text = ""
         print(3)
         //データベースの階層URL
-        let ref = Database.database().reference(fromURL: "https://realtimechat-e6e96.firebaseio.com/").child("post").childByAutoId()
+        let ref = Database.database().reference(fromURL: "https://realtimechat-e6e96.firebaseio.com/").child("post").child("\(childNumber)")
         print(4)
         //データを保存するときの辞書
         let data = ["username":username, "message": message]
@@ -117,12 +123,12 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 //        tableView.reloadData()
         print(7)
         //セルが追加される度に自動スクロール
-        if Posts.count > 1 {
-            print(8)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.tableView.scrollToRow(at: IndexPath(row: self.Posts.count - 1, section: 0), at: UITableView.ScrollPosition.bottom, animated: true)
-            }
-        } else {}
+//        if Posts.count > 1 {
+//            print(8)
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//                self.tableView.scrollToRow(at: IndexPath(row: self.Posts.count - 1, section: 0), at: UITableView.ScrollPosition.bottom, animated: true)
+//            }
+//        } else {}
         print(9)
     }
     
@@ -154,7 +160,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 self.Posts.append(self.Post)
             }
             print(17)
-            self.childNumber = self.Posts.count
+            
             print(18)
             self.tableView.reloadData()
             print(19)
