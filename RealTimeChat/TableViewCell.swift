@@ -7,61 +7,63 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseUI
 
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var MyView: UIView!
     @IBOutlet weak var MyLabel: UILabel!
+    @IBOutlet weak var MyDateLabel: UILabel!
+    @IBOutlet weak var MyImageView: UIImageView!
     
     @IBOutlet weak var OtherView: UIView!
     @IBOutlet weak var OtherLabel: UILabel!
+    @IBOutlet weak var OtherDateLabel: UILabel!
+    @IBOutlet weak var OtherImageView: UIImageView!
     
     var isMe = Bool()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     //引数のusernameとUDのユーザー名が一致するかで、表示する吹き出しが変わる
-    func talk(_ username:String, _ message:String) {
+    func talk(_ username:String, _ message:String, _ date:String, _ ref: StorageReference) {
         
-        print(23)
         //UDに登録されてるユーザー名と同じ？
         if username == UserDefaults.standard.object(forKey: "userName") as! String {
             isMe = true
         } else {
             isMe = false
         }
-        print(24)
         //meTalkViewが表示、partnerTalkViewが非表示
         MyView.isHidden = !isMe
         OtherView.isHidden = isMe
-print(25)
         //表示されるViewのラベルに設定を施す
         if isMe {
-            print(26)
             //Labelに設定を施す
             settingLabel(label: MyLabel)
-            print(27)
             //meTalkViewは文字を表示、partnerTalkViewは文字を表示しない
             MyLabel.text = isMe ? message : ""
-            print(28)
+            MyDateLabel.text = isMe ? date : ""
+            MyImageView.sd_setImage(with: ref)
         } else {
             settingLabel(label: OtherLabel)
             OtherLabel.text = isMe ? "" : message
+            OtherDateLabel.text = isMe ? "" : date
         }
         
+    }
+    
+    //メッセのアイコンを設定
+    func settingImage(_ ref: StorageReference) {
+        MyImageView.sd_setImage(with: ref)
     }
 
     //指定されたLabelに設定をほどこす
     func settingLabel(label: UILabel) {
-        print(29)
         label.font = UIFont(name: "HiraKakuProN-W3", size: 18)
         label.numberOfLines = 0
         label.lineBreakMode = .byCharWrapping
         label.layer.cornerRadius = 50
-        print(30)
     }
     
 }

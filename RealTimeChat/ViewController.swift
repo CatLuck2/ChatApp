@@ -26,7 +26,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
         if let _ = UserDefaults.standard.object(forKey: "userName") {
             //ボタンの文字を"ログイン"に変更
             login.setTitle("Sign in", for: .normal)
-            //保存されてないなら
+            //遷移
+            performSegue(withIdentifier: "goTimeLine", sender: nil)
+        //保存されてないなら
         } else {
             login.setTitle("Sign up", for: .normal)
         }
@@ -38,24 +40,27 @@ class ViewController: UIViewController,UITextFieldDelegate {
         if let _ = UserDefaults.standard.object(forKey: "userName") {
             
             //もし入力した値が保存したユーザー名と同じなら
-            if textField.text ==  UserDefaults.standard.object(forKey: "userName") as? String {
-                
-                //遷移
-                performSegue(withIdentifier: "goTimeLine", sender: nil)
-                
-            //違うなら
-            } else {
-                
-                //アラート作成
-                let alert = EMAlertController(title: "ユーザー名が正しくありません。", message: "")
-                //アクション作成
-                let action = EMAlertAction(title: "OK", style: .cancel)
-                //アラートにアクションを追加する
-                alert.addAction(action: action)
-                //アラートを表示
-                present(alert, animated: true, completion: nil)
-                
-            }
+//            if textField.text ==  UserDefaults.standard.object(forKey: "userName") as? String {
+//
+//                //遷移
+//                performSegue(withIdentifier: "goTimeLine", sender: nil)
+//
+//            //違うなら
+//            } else {
+//
+//                //アラート作成
+//                let alert = EMAlertController(title: "ユーザー名が正しくありません。", message: "")
+//                //アクション作成
+//                let action = EMAlertAction(title: "OK", style: .cancel)
+//                //アラートにアクションを追加する
+//                alert.addAction(action: action)
+//                //アラートを表示
+//                present(alert, animated: true, completion: nil)
+//
+//            }
+            
+            //遷移
+            performSegue(withIdentifier: "goTimeLine", sender: nil)
             
         //新規登録の場合
         } else {

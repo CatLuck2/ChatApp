@@ -12,5 +12,6 @@ target 'RealTimeChat' do
   pod 'Firebase/Auth'
   pod 'FirebaseDatabase'
   pod 'EMAlertController'
+  pod 'FirebaseUI/Storage'
 
 end

@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BE6875A0C65CA7B51085C9A3 /* Pods_RealTimeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC852FDF675D2FE2438721 /* Pods_RealTimeChat.framework */; };
+		D735885B21902CCD0073AF03 /* EMAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D735885A21902CCD0073AF03 /* EMAlertController.framework */; };
+		D735885D2190407F0073AF03 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735885C2190407F0073AF03 /* RoomViewController.swift */; };
+		D735885F219060800073AF03 /* 1782_wallpaper_640x960_iphone4_iphone4s_761ed5f2d75603f693ce9068dbabc80a_raw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D735885E219060800073AF03 /* 1782_wallpaper_640x960_iphone4_iphone4s_761ed5f2d75603f693ce9068dbabc80a_raw.jpg */; };
 		D7438016218D736400C46B13 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7438014218D736400C46B13 /* TableViewCell.swift */; };
 		D7438017218D736400C46B13 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7438015218D736400C46B13 /* TableViewCell.xib */; };
 		D7438019218D757800C46B13 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7438018218D757800C46B13 /* ChatViewController.swift */; };
-		D743801B218D75D600C46B13 /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743801A218D75D600C46B13 /* OpeningViewController.swift */; };
 		D743801D218D83C700C46B13 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743801C218D83C700C46B13 /* Object.swift */; };
 		D743801F218D9E0D00C46B13 /* 猫.png in Resources */ = {isa = PBXBuildFile; fileRef = D743801E218D9E0D00C46B13 /* 猫.png */; };
 		D7ABEB6A218C173600B4F036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABEB69218C173600B4F036 /* AppDelegate.swift */; };
@@ -20,15 +22,18 @@
 		D7ABEB71218C173800B4F036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ABEB70218C173800B4F036 /* Assets.xcassets */; };
 		D7ABEB74218C173800B4F036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7ABEB72218C173800B4F036 /* LaunchScreen.storyboard */; };
 		D7ABEB80218C183E00B4F036 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7ABEB7F218C183D00B4F036 /* GoogleService-Info.plist */; };
+		D7C4954C2191720F00004774 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C4954B2191720F00004774 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F9D48D397E386B18537FF40 /* Pods-RealTimeChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTimeChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealTimeChat/Pods-RealTimeChat.debug.xcconfig"; sourceTree = "<group>"; };
 		78AC852FDF675D2FE2438721 /* Pods_RealTimeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealTimeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D735885A21902CCD0073AF03 /* EMAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EMAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D735885C2190407F0073AF03 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		D735885E219060800073AF03 /* 1782_wallpaper_640x960_iphone4_iphone4s_761ed5f2d75603f693ce9068dbabc80a_raw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1782_wallpaper_640x960_iphone4_iphone4s_761ed5f2d75603f693ce9068dbabc80a_raw.jpg; sourceTree = "<group>"; };
 		D7438014218D736400C46B13 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D7438015218D736400C46B13 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		D7438018218D757800C46B13 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		D743801A218D75D600C46B13 /* OpeningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
 		D743801C218D83C700C46B13 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		D743801E218D9E0D00C46B13 /* 猫.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "猫.png"; sourceTree = "<group>"; };
 		D7ABEB66218C173600B4F036 /* RealTimeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealTimeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +44,7 @@
 		D7ABEB73218C173800B4F036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7ABEB75218C173800B4F036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7ABEB7F218C183D00B4F036 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7C4954B2191720F00004774 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		F01059AA8AEE22611755B42C /* Pods-RealTimeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTimeChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealTimeChat/Pods-RealTimeChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D735885B21902CCD0073AF03 /* EMAlertController.framework in Frameworks */,
 				BE6875A0C65CA7B51085C9A3 /* Pods_RealTimeChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +64,7 @@
 		CD7E550636E7374C9921AE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D735885A21902CCD0073AF03 /* EMAlertController.framework */,
 				78AC852FDF675D2FE2438721 /* Pods_RealTimeChat.framework */,
 			);
 			name = Frameworks;
@@ -85,13 +93,15 @@
 			children = (
 				D7ABEB69218C173600B4F036 /* AppDelegate.swift */,
 				D743801C218D83C700C46B13 /* Object.swift */,
-				D743801A218D75D600C46B13 /* OpeningViewController.swift */,
 				D7ABEB6B218C173600B4F036 /* ViewController.swift */,
+				D735885C2190407F0073AF03 /* RoomViewController.swift */,
+				D7C4954B2191720F00004774 /* SettingViewController.swift */,
 				D7438018218D757800C46B13 /* ChatViewController.swift */,
 				D7438014218D736400C46B13 /* TableViewCell.swift */,
 				D7438015218D736400C46B13 /* TableViewCell.xib */,
 				D7ABEB6D218C173600B4F036 /* Main.storyboard */,
 				D743801E218D9E0D00C46B13 /* 猫.png */,
+				D735885E219060800073AF03 /* 1782_wallpaper_640x960_iphone4_iphone4s_761ed5f2d75603f693ce9068dbabc80a_raw.jpg */,
 				D7ABEB70218C173800B4F036 /* Assets.xcassets */,
 				D7ABEB72218C173800B4F036 /* LaunchScreen.storyboard */,
 				D7ABEB75218C173800B4F036 /* Info.plist */,
@@ -175,6 +185,7 @@
 				D743801F218D9E0D00C46B13 /* 猫.png in Resources */,
 				D7ABEB6F218C173600B4F036 /* Main.storyboard in Resources */,
 				D7ABEB80218C183E00B4F036 /* GoogleService-Info.plist in Resources */,
+				D735885F219060800073AF03 /* 1782_wallpaper_640x960_iphone4_iphone4s_761ed5f2d75603f693ce9068dbabc80a_raw.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +206,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -211,6 +223,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -253,10 +266,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7438016218D736400C46B13 /* TableViewCell.swift in Sources */,
-				D743801B218D75D600C46B13 /* OpeningViewController.swift in Sources */,
+				D735885D2190407F0073AF03 /* RoomViewController.swift in Sources */,
 				D7ABEB6C218C173600B4F036 /* ViewController.swift in Sources */,
 				D7438019218D757800C46B13 /* ChatViewController.swift in Sources */,
 				D743801D218D83C700C46B13 /* Object.swift in Sources */,
+				D7C4954C2191720F00004774 /* SettingViewController.swift in Sources */,
 				D7ABEB6A218C173600B4F036 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

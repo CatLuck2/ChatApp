@@ -12,5 +12,6 @@ class Object: NSObject {
     
     var username = String()
     var message = String()
+    var date = String()
 
 }
